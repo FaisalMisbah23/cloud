@@ -105,7 +105,7 @@ function PresetCard({
         isSelected && isFrontier
           ? 'border-[color:oklch(80%_0.18_180_/_0.4)] bg-black/40'
           : isSelected
-            ? 'border-[color:oklch(95%_0.15_108_/_0.5)] bg-[color:oklch(95%_0.15_108_/_0.06)]'
+            ? 'border-border bg-surface-selected'
             : 'border-white/[0.08] bg-white/[0.02]'
       )}
     >
@@ -116,7 +116,7 @@ function PresetCard({
       {isSelected && !isFrontier && (
         <motion.div
           layoutId="preset-ring"
-          className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-[color:oklch(95%_0.15_108_/_0.5)]"
+          className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-white/20"
           transition={shouldReduce ? { duration: 0 } : { type: 'spring', stiffness: 400, damping: 30 }}
         />
       )}
@@ -152,14 +152,14 @@ function CustomCard({ isSelected, onSelect }: { isSelected: boolean; onSelect: (
         'relative flex flex-col rounded-lg border p-4 text-left transition-all',
         'hover:bg-white/[0.04]',
         isSelected
-          ? 'border-[color:oklch(95%_0.15_108_/_0.5)] bg-[color:oklch(95%_0.15_108_/_0.06)]'
+          ? 'border-border bg-surface-selected'
           : 'border-white/[0.08] border-dashed bg-white/[0.01]'
       )}
     >
       {isSelected && (
         <motion.div
           layoutId="preset-ring"
-          className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-[color:oklch(95%_0.15_108_/_0.5)]"
+          className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-white/20"
           transition={shouldReduce ? { duration: 0 } : { type: 'spring', stiffness: 400, damping: 30 }}
         />
       )}
